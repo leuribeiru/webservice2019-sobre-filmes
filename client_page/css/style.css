@@ -20,6 +20,10 @@
     display: flex;
 }
 
+.coluna_resultado{
+    display: flex;
+}
+
 .youtube{
     background: #915;
 }
@@ -34,7 +38,7 @@
 }
 
 .omdbPoster{
-    display: flex;
+    width: 100%;
     align-self: center;
     margin: auto;
 }
