@@ -1,8 +1,7 @@
 # trabalho de webservice 2019
 
 Projeto:
- - nome: sobre-filmes
- - link: https://leuribeiru.github.io/webservice2019-sobre-filmes/
+ - link de acesso: https://leuribeiru.github.io/webservice2019-sobre-filmes/
  - conteúdo do projeto
      - client_page -> aplicação html/javascript single page
      - flask_server -> aplicação flask (python)
