@@ -1,0 +1,40 @@
+#listaResultado{
+    display:none;
+}
+
+#resultado{
+    display: none;
+}
+
+.item-list{
+    width: 16rem;
+    margin: 2rem;
+    display: inline-table !important;
+}
+
+.search-field{
+    margin: 1rem auto;
+}
+
+.resultado{
+    display: flex;
+}
+
+.youtube{
+    background: #915;
+}
+
+.media{
+    margin: 1rem;
+}
+
+.img_media{
+    margin: 0.3rem;
+    border-radius: 50%;
+}
+
+.omdbPoster{
+    display: flex;
+    align-self: center;
+    margin: auto;
+}
