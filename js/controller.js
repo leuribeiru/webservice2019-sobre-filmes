@@ -2,11 +2,15 @@
 
 var btn_buscar = document.getElementById('btnBuscar');
 var campo_nome = document.getElementById('campoNome');
-var campo_ano = document.getElementById('campoAno');
 
 btn_buscar.onclick = function () {
-  console.log("nome: " + campo_nome.value);
   pesquisarFilme(campo_nome.value);
+}
+
+campo_nome.onkeypress = function(e){
+  if(e.key == "Enter"){
+    pesquisarFilme(campo_nome.value);
+  }
 }
 
 const API_URL = "https://sobrefilmesapi.herokuapp.com/";
@@ -43,7 +47,6 @@ function pesquisarFilme(nomeFilme) {
     }
   };
   var url_request = API_URL + OMDB + "?nome=" + nomeFilme;
-  console.log(url_request);
   req.open('GET', url_request);
   req.send(null);
 }
@@ -87,7 +90,6 @@ function listarResultado(result) {
       }
     };
     var url_request = API_URL + OMDB + "/" + idItem;
-    console.log(url_request);
     req.open('GET', url_request);
     req.send(null);
   }
@@ -98,11 +100,9 @@ function listarResultado(result) {
       if (req.readyState === XMLHttpRequest.DONE && req.status === 200) {
         var resp = JSON.parse(req.responseText)
         video.src = YOUTUBE_EMBED_URL + resp['videoId']
-        console.log(resp)
       }
     };
     var url_request = API_URL + YOUTUBE + "?nome=" + nome;
-    console.log(url_request);
     req.open('GET', url_request);
     req.send(null);
   }
@@ -116,7 +116,6 @@ function listarResultado(result) {
       }
     };
     var url_request = API_URL + TWITTER + "?nome=" + nome;
-    console.log(url_request);
     req.open('GET', url_request);
     req.send(null);
   }
@@ -154,8 +153,6 @@ function listarResultado(result) {
 
     function mostrarInformacoes(result) {
       resultado.style.display = "flex";
-
-      console.log(result)
 
       omdb_poster.src = result['Poster'] != 'N/A' ? result['Poster'] : 'img/no_image.jpg'
       omdb_title.innerText = result['Title']
