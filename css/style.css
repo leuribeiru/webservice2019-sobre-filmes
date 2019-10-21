@@ -12,6 +12,10 @@
     display: inline-table !important;
 }
 
+.item-list:hover{
+    cursor: pointer;
+}
+
 .search-field{
     margin: 1rem auto;
 }
