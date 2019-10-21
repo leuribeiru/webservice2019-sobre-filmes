@@ -15,7 +15,7 @@ Projeto:
      - A API desenvolvida em flask recebe a requisição do cliente nos end-points acima, faz o acesso as APIs do omdb, twitter e youtube entrega a uma resposta mais elegante em json para o cliente
     
    - front-end
-     - url: https://leuribeiru.github.io/webservice2019-sobre-filmes/
+     - url: https://leuribeiru.github.io/webservice2019-sobre-filmes/ (branch: gh-pages)
        - Busca por filmes
          - exibe as informações do filme e o Poster caso exista um.
          - exibe os últimos comentários sobre o filme no Twitter
