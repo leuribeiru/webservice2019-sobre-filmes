@@ -11,7 +11,7 @@ Projeto:
      - .../omdb/[omdbId (encontrado no retorno da url anterior)]
      - .../twitter?nome=[nome do filme para buscar por ocorrencias no twitter]
      - .../youtube?nome=[nome do filme para buscar pelo trailler no youtube]
-   - A API desenvolvida em flask recebe a requisição do cliente nos end-points acima, faz o acesso as APIs do omdb, twitter e youtube entrega a uma resposta mais elegante em json para o cliente
+   - A API desenvolvida em flask recebe a requisição do cliente nos end-points acima, faz o acesso as APIs do omdb, twitter e youtube e entrega ao cliente uma resposta mais elegante em json.
     
  - front-end
    - url: https://leuribeiru.github.io/webservice2019-sobre-filmes/ (branch: gh-pages)
@@ -19,6 +19,6 @@ Projeto:
        - exibe as informações do filme e o Poster caso exista um.
        - exibe os últimos comentários sobre o filme no Twitter
        - exibe um vídeo do youtube sobre o filme (tenta buscar pelo trailer do filme)
-   - Uma página HTML que faz requisições HTTP via javascript nos end-points da aplicação flask e mostra o resultado para o usuário da aplicação
+   - Uma página HTML que faz requisições HTTP via javascript nos end-points da aplicação flask e mostra o resultado renderizado para o usuário da aplicação.
    
  
