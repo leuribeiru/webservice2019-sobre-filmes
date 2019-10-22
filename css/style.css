@@ -46,3 +46,7 @@
     align-self: center;
     margin: auto;
 }
+
+.not_found{
+    display: none;
+}
