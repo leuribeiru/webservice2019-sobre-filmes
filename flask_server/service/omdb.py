@@ -3,7 +3,7 @@
 import requests
 import json
 
-API_KEY="a46a2899"
+API_KEY=""
 API_URL="http://www.omdbapi.com/?apikey={0}".format(API_KEY)
 MOVIE="&type=movie"
 
