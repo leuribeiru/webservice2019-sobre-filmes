@@ -58,30 +58,31 @@ function listarResultado(result) {
   lista_resultado.innerHTML = '';
   if(result.length < 1 || (result.length == 1 && result[0] == null) ){
     not_found.style.display = "block";
-  }
-  for (var i = 0; i < result.length && i < 8; i++) {
+  }else{
+    for (var i = 0; i < result.length && i < 8; i++) {
 
-    var item = document.createElement("div")
-    item.id = result[i]['imdbID']
-    item.className = "card item-list";
-    item.onclick = function () {
-      buscarOMDB(this.id);
-      buscarTwittes(campo_nome.value);
-      lista_resultado.style.display = "none";
+      var item = document.createElement("div")
+      item.id = result[i]['imdbID']
+      item.className = "card item-list";
+      item.onclick = function () {
+        buscarOMDB(this.id);
+        buscarTwittes(campo_nome.value);
+        lista_resultado.style.display = "none";
+      }
+
+      var item_poster = document.createElement("IMG")
+      item_poster.src = result[i]['Poster'] != 'N/A' ? result[i]['Poster'] : 'img/no_image.jpg';
+      item_poster.className = "card-img-top";
+
+      var item_ano = document.createElement("P")
+      item_ano.className = "card-text";
+      item_ano.innerText = result[i]['Year'];
+
+      item.appendChild(item_poster)
+      item.appendChild(item_ano)
+
+      lista_resultado.appendChild(item)
     }
-
-    var item_poster = document.createElement("IMG")
-    item_poster.src = result[i]['Poster'] != 'N/A' ? result[i]['Poster'] : 'img/no_image.jpg';
-    item_poster.className = "card-img-top";
-
-    var item_ano = document.createElement("P")
-    item_ano.className = "card-text";
-    item_ano.innerText = result[i]['Year'];
-
-    item.appendChild(item_poster)
-    item.appendChild(item_ano)
-
-    lista_resultado.appendChild(item)
   }
 
   function buscarOMDB(idItem) {
