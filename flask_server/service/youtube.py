@@ -4,7 +4,7 @@ from apiclient.discovery import build
 import requests
 import json
 
-API_KEY="AIzaSyDaXdLh0HClVfXOtVc9nk95xrsa6TLUkx0"
+API_KEY=""
 TAG_TRAILLER=" movie trailer"
 
 def pesquisarVideo(nomeFilme):
