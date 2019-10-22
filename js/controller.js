@@ -56,7 +56,7 @@ function pesquisarFilme(nomeFilme) {
 function listarResultado(result) {
   lista_resultado.style.display = "inline-table";
   lista_resultado.innerHTML = '';
-  if(result.length < 1){
+  if(result.length < 1 || (result.length == 1 && result[0] == null) ){
     not_found.style.display = "block";
   }
   for (var i = 0; i < result.length && i < 8; i++) {
