@@ -35,10 +35,12 @@ var omdb_genre = document.getElementById("omdbGenre")
 var omdb_actors = document.getElementById("omdbActors");
 var omdb_plot = document.getElementById("omdbPlot")
 
+var not_found = document.getElementById('not_found');
 
 function pesquisarFilme(nomeFilme) {
   resultado.style.display = 'none'
   lista_twitter.style.display = 'none'
+  not_found.style.display = 'none'
   video.src = ""
   var req = new XMLHttpRequest();
   req.onreadystatechange = function () {
@@ -54,7 +56,9 @@ function pesquisarFilme(nomeFilme) {
 function listarResultado(result) {
   lista_resultado.style.display = "inline-table";
   lista_resultado.innerHTML = '';
-
+  if(result.length < 1){
+    not_found.style.display = "block";
+  }
   for (var i = 0; i < result.length && i < 8; i++) {
 
     var item = document.createElement("div")
